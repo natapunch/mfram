@@ -1,0 +1,14 @@
+{
+    "name": "mindk/fram",
+    "description": "FW",
+    "type": "fram",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "natapunch",
+            "email": "natapunch7@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
