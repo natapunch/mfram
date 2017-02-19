@@ -1,7 +1,6 @@
 {
     "name": "mindk/fram",
     "description": "FW",
-    "type": "fram",
     "license": "MIT",
     "authors": [
         {
@@ -9,6 +8,11 @@
             "email": "natapunch7@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Mindk\\Fram\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
