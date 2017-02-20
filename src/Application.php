@@ -3,7 +3,7 @@
  *
  */
 
-namespace Mindk\framework;
+namespace Mindk\fram;
 
 
 class Application
