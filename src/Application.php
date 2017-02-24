@@ -11,35 +11,39 @@ use Mindk\Fram\Request\Request;
  */
 class Application
 {
-
+public $config=[];
 
 //    public function start()
 //    {
 //        $request = Request::getRequest();
 //        $router = new Router(require __DIR__ . "/../config/routes.php");
 //    }
-
     /**
-     *App initialization
+     * Application constructor.
      */
-    public function init()
+    public function __construct($config=[])
     {
-
+        $this->config=$config;
     }
 
-    /**
+        /**
      *Process the request
      */
     public function run()
     {
+    $router=new Router($this->config['routes']);
+    $request=Request::getRequest();
+    $route=$router->getRoute($request);
 
+    echo "pre>";
+    print_r($route);
+    echo "</pre>";
     }
-
     /**
      *Close active conections
      */
-    public function done()
+    public function destruct()
     {
-
+    unset ($this->config);
     }
 }

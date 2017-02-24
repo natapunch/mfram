@@ -1,7 +1,8 @@
 <?php
 namespace Mindk\Fram\Request;
 /**
- *
+ *Request processing class
+ * @package Mindk\Fram
  */
 class Request
 {
@@ -9,7 +10,7 @@ class Request
 
     /**
      * Request constructor.
-     * Request processing class
+     *
      */
     private function __construct()
     {

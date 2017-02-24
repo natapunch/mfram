@@ -48,8 +48,22 @@ class Router
      {
 
             // todo check uri by regexp and method
+         $uri=$request->getUri();
+         foreach ($this->routes as $name=>$route){
+             if(preg_match('/'.$route['rergexp'].'/',$uri)&&($route['metod']==$request->getMethod())){
+$result=new Route();
+$result->name=$name;
+$result->controller=$route['controller_name'];
+$result->method=$route['controller_metod'];
+//$result->params=
+
+return $result;
+         }
+     }
+     throw new \Exception('Route not found');
             // todo if variables - get
             // todo make Route and return
+
 
         }
 
